@@ -1,7 +1,8 @@
 <?php
     // Functie: classdefinitie User 
     // Auteur: ishika
-    require_once 'db.php';
+    //require_once 'db.php';
+    namespace Login\classes;
  
     class User {
      
@@ -21,7 +22,7 @@
         }
      
         // Controleer of de username geldig is (tussen 3 en 50 tekens)
-        function IsValidUsername($username) {
+        function InValidUsername($username) {
             return strlen($username) >= 3 && strlen($username) <= 50;
         }
      
@@ -78,12 +79,18 @@
         // Valideer gebruikersinvoer
         function ValidateUser() {
             $errors = [];
+
+        
+
+            if (empty($this->username)) {
+                $errors[] = "Please enter a valid username.";
+            }
      
-            if (!$this->IsValidUsername($this->username)) {
+            else if (!$this->InValidUsername($this->username)) {
                 array_push($errors, "Invalid username (moet tussen 3 en 50 tekens zijn).");
             }
      
-            if (empty($this->password)) {
+            else if (empty($this->password)) {
                 array_push($errors, "Invalid password");
             }
      
