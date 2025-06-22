@@ -1,5 +1,5 @@
 <?php
-	//auteur: RJ van Klaveren
+	//auteur: ishika
 	// Is de login knop aangeklikt?
 	if(isset($_POST['login-btn']) ){
 
