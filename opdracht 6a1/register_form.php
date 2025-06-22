@@ -1,5 +1,5 @@
 <?php
-//auteur: RJ van Klaveren
+//auteur: ishika
 // Is de register button aangeklikt?
 if(isset($_POST['register-btn'])){
 	require_once('classes/user.php');
