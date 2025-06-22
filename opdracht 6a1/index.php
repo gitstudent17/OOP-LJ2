@@ -1,6 +1,6 @@
 <?php
     // Functie: programma login OOP 
-    // Auteur: RJ van Klaveren
+    // Auteur: ishika
 
     // Initialisatie
 ?>
